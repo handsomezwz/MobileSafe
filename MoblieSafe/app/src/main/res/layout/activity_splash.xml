@@ -7,10 +7,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.zwz.android.mobliesafe.SplashActivity">
+    tools:context="com.zwz.android.mobliesafe.SplashActivity"
+    android:background="@drawable/luncher_bg">
 
     <TextView
+        android:shadowColor="#d9f100"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="版本号:1.0"
+        android:id="@+id/luncher_tv"
+        android:layout_centerInParent="true"
+        android:textColor="#000000"/>
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/luncher_tv"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
