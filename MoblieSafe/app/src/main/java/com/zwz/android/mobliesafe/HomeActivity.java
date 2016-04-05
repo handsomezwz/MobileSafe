@@ -1,10 +1,12 @@
 package com.zwz.android.mobliesafe;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -22,6 +24,16 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
         gv_home = (GridView) findViewById(R.id.gv_home);
         gv_home.setAdapter(new MyAdaper());
+        gv_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 8:
+                        Intent intent = new Intent(HomeActivity.this,SettingActivity.class);
+                        startActivity(intent);
+                }
+            }
+        });
     }
 
     private class MyAdaper extends BaseAdapter{

@@ -3,19 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zwz.android.mobliesafe.HomeActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.zwz.android.mobliesafe.HomeActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="功能列表"
-        android:textSize="22sp"
         android:background="#85e4bb"
         android:gravity="center"
+        android:paddingBottom="5dp"
         android:paddingTop="5dp"
-        android:paddingBottom="5dp"/>
+        android:text="功能列表"
+        android:textSize="22sp" />
+
+    <!--
+    ellipsize:
+    none:省略后面的文字
+    start：隐藏前面的文字
+    middle：隐藏中间的文字
+    end：隐藏后面的文字，用小点代表后面文字
+    marquee：滚动
+    focusableInTouchMode:触摸焦点
+    focusable:是否获取焦点
+    marqueeRepeatLimit:设置滚动次数
+    -->
+    <com.zwz.android.mobliesafe.ui.HomeTextView
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="手机卫士，真厉害啊，厉害到合不拢腿，打开七次可以召唤美女，帮你完美杀杀毒，调调情，么么哒" />
 
     <GridView
         android:id="@+id/gv_home"
