@@ -222,7 +222,6 @@ public class SplashActivity extends Activity {
 
             private Message message;
             //细节处理，对话框的显示时间
-
             @Override
             public void run() {
 
